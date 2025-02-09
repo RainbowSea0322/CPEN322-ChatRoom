@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (min-width:1024px) {
+    #app-view {
+        width: 80%;
+    }
+    #summary{
+        right: calc(10vw);
+    }
+    #summaryList-con{
+        right: calc(10vw);
+    }
+    #regenerate-con {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    #app-view {
+        width: 90%;
+    }
+    #summary{
+        right: calc(5vw);
+    }
+    #summaryList-con{
+        right: calc(5vw);
+    }
+    #regenerate-con {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #app-view {
+        width: 100%;
+    }
+    #summary{
+        right: 0;
+    }
+    #summaryList-con{
+        right: 0;
+    }
+    #regenerate-con {
+        width: 70vw;
+    }
+}
+
+#app-view {
+    margin: 0 auto;
+    height: 100%;
+}
+
+#app-menu {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    align-items: center;
+    list-style-type: none;
+}
+
+#app-menu li div{
+    background-color:#1e1e8b;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.menu-item img {
+    height: 50px;
+    width: auto;
+    filter: invert(100%);
+    vertical-align: middle;
+}
+
+.menu-item span {
+    height: 50%;
+    color: inherit;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: x-large;
+
+    vertical-align: middle;
+}
+
+#page-view {
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+}
+
+.room-list {
+    width: 100%;
+    height: calc(100vh - 200px);
+    background-color: white;
+    list-style-type: none;
+
+    text-align: left;
+    justify-content: center;
+
+    border: 1px black solid;
+
+    overflow-y: auto;
+}
+
+.room-list li {
+    height: 80px;
+
+    border-top: 1px grey solid;
+    border-bottom: 1px grey solid;
+}
+
+.room-list li div{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220, 220, 220);
+}
+
+.room-list img {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: 15px 0 20px 15px;
+}
+
+.room-list span {
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    
+    margin: 15px 0 20px 15px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: black;
+}
+
+.page-control {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #1e1e8b;
+
+    border: 1px black solid;
+    border-top: none;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.page-control * {
+    border-radius: 10px;
+}
+
+#room-title {
+    height: 60%;
+    width: 300px;
+
+    text-align: center;
+}
+
+.page-control button {
+    margin: 0 10px;
+    height: 60%;
+    width: 150px;
+    cursor: pointer;
+}
+
+.room-name {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    text-align: left;
+    justify-content: center;
+
+    padding-left: 20px;
+}
+
+.message-list {
+    height: calc(100vh - 240px);
+
+    min-height: calc(100vh - 240px);
+    max-height: calc(100vh - 240px);
+
+    background-color: rgb(220, 220, 220);
+
+    padding-top: 15px;
+    border: 1px solid black;
+
+    overflow-y: auto;
+}
+
+.message {
+    width: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 auto 15px 20px;
+    padding: 15px;
+}
+
+.my-message {
+    background-color:cornflowerblue;
+    color: white;
+    margin: 0 20px 15px auto;
+}
+
+.message-user {
+    font-weight: bold;
+}
+
+textarea {
+    height: 60%;
+    width: calc(80vw - 200px);
+
+    padding: 15px 0 0 20px;
+    text-align: left;
+
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profile-form {
+    height: calc(100vh - 200px);
+
+    border: 1px solid black;
+}
+
+.form-field {
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 1px solid grey;
+}
+
+.form-field label {
+    width: 15%;
+    height: 60%;
+    margin-left: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-field input {
+    width: 30%;
+    height: 40%;
+
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+#profile-avatar-image-input {
+    padding-left: 0;
+}
+
+#app-menu li :hover{
+    background-color: lightblue;
+    color: black;
+}
+
+#app-menu li :hover img{
+    background: inherit;
+    filter: none;
+}
+
+.room-list li :hover{
+    background-color: blanchedalmond;
+}
+
+#summary {
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    top: 160px;
+
+    background-color: cadetblue;
+    border-radius: 30px 0 0 30px;
+    cursor: pointer;
+    transition: width 0.3s ease;
+
+    border-right: 1px black solid;
+
+    text-align: center;
+}
+
+#summary:hover {
+    width: 150px;
+}
+
+#summary::before {
+    content: "AI";
+    color: white;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    transition: none;
+}
+
+#summary:hover::before {
+    content: "Summary";
+    font-size: 24px;
+}
+
+@keyframes expandAnimation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: fit-content;
+    }
+}
+
+@keyframes hideAnimation {
+    0% {
+        height: fit-content;
+    }
+    100% {
+        height: 35px;
+    }
+}
+
+@keyframes closeAnimation {
+    0% {
+        height: fit-content;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+#summaryList-con {
+    width: 30vw;
+    height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: 101px;
+
+    border: 1px black solid;
+    border-radius: 10px 0 0 0;
+}
+
+#summaryList-con.expand {
+    animation: expandAnimation 0.5s ease forwards;
+}
+
+#summaryList-con.hide {
+    animation: hideAnimation 0.5s ease forwards;
+}
+
+.summary-buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+
+.summary-buttons button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#summaryList {
+    display: flex;
+
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.summaryList-item {
+    display: flex;
+    width: 100%;
+    min-height: 120px;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border-top: 1px solid black;
+}
+
+#summaryList .summaryList-item:nth-child(odd) {
+    background-color: antiquewhite;
+}
+
+#summaryList .summaryList-item:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+#summaryList .summaryList-item:hover {
+    color: blue;
+    background-color: lightgoldenrodyellow;
+}
+
+.summaryList-item-num {
+    width: 10%;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.summaryList-item-content {
+    width: 90%;
+    padding-left: 10px;
+}
+
+#regenerate-con{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 101px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#regenerate-con.expand {
+    animation: expandAnimation 0.5s ease forwards;
+}
+
+#regenerate-con.close {
+    animation: closeAnimation 0.5s ease forwards;
+}
+
+#regenerate-con button{
+    width: 100%;
+    height: 50px;
+
+    font-weight: bold;
+
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+
+    color: white;
+    background-color: #007bff;
+
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+#regenerate-con button:hover {
+    background-color: #0056b3;
+}
